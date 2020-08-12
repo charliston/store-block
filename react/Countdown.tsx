@@ -6,9 +6,9 @@ interface CountdownProps {
   targetDate: string
 }
 
-// const DEFAULT_TARGET_DATE = (new Date('2020-06-25')).toISOString()
+const DEFAULT_TARGET_DATE = (new Date('2020-06-25')).toISOString()
 
-const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ targetDate }) => {
+const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ targetDate = DEFAULT_TARGET_DATE }) => {
   const [timeRemaining, setTime] = useState<TimeSplit>({
     hours: '00',
     minutes: '00',
